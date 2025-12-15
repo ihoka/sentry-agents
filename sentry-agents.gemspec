@@ -5,8 +5,8 @@ require_relative "lib/sentry/agents/version"
 Gem::Specification.new do |spec|
   spec.name = "sentry-agents"
   spec.version = Sentry::Agents::VERSION
-  spec.authors = ["SwiftTail"]
-  spec.email = ["dev@flyswifttail.com"]
+  spec.authors = ["Istvan Hoka"]
+  spec.email = ["istvan.hoka@gmail.com"]
 
   spec.summary = "Sentry Gen AI instrumentation for AI/LLM agents in Ruby"
   spec.description = <<~DESC
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
     supporting multiple providers (Anthropic, OpenAI, etc.)
     with auto-instrumentation for RubyLLM and LangChain.rb.
   DESC
-  spec.homepage = "https://github.com/sentry-agents/sentry-agents-ruby"
+  spec.homepage = "https://github.com/ihoka/sentry-agents-ruby"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
