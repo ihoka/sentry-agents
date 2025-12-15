@@ -201,7 +201,14 @@ The release workflow will automatically:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/sentry-agents/sentry-agents-ruby.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ihoka/sentry-agents/.
+
+## Sponsors
+
+This project is sponsored by:
+
+- [Swift Tail](https://FlySwiftTail.com)
+- [TORY](https://inventory.capital/)
 
 ## License
 
