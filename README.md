@@ -177,6 +177,28 @@ rake rubocop   # Run linter
 rake           # Run both
 ```
 
+## Releasing
+
+Releases are automated via GitHub Actions. To publish a new version:
+
+1. Update the version in `lib/sentry/agents/version.rb`
+2. Update `CHANGELOG.md` with the new version's changes
+3. Commit the changes:
+   ```bash
+   git add -A && git commit -m "Bump version to X.Y.Z"
+   ```
+4. Create and push a version tag:
+   ```bash
+   git tag vX.Y.Z
+   git push origin main --tags
+   ```
+
+The release workflow will automatically:
+- Run the test suite
+- Build the gem
+- Publish to RubyGems
+- Create a GitHub Release with auto-generated release notes
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/sentry-agents/sentry-agents-ruby.
