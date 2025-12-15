@@ -65,10 +65,10 @@ module Sentry
           Integrations::RubyLLM.install
         end
 
-        if configuration.auto_instrument_langchainrb && defined?(Langchain)
-          require_relative "agents/integrations/langchainrb"
-          Integrations::LangChainRb.install
-        end
+        return unless configuration.auto_instrument_langchainrb && defined?(Langchain)
+
+        require_relative "agents/integrations/langchainrb"
+        Integrations::LangChainRb.install
       end
     end
   end

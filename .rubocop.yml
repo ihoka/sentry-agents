@@ -6,8 +6,29 @@ AllCops:
     - "vendor/**/*"
     - "tmp/**/*"
 
-require:
+plugins:
   - rubocop-minitest
+
+# Use double-quoted strings consistently
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+# Standard gem naming convention (hyphens are standard for gem entry points)
+Naming/FileName:
+  Enabled: false
+
+# These are mock methods matching Sentry's API
+Naming/AccessorMethodName:
+  Exclude:
+    - "test/**/*"
+
+# Allow short parameter names for Sentry API compatibility
+Naming/MethodParameterName:
+  Exclude:
+    - "test/**/*"
 
 Style/Documentation:
   Enabled: false
@@ -15,10 +36,60 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: true
 
+# Compact class style is common in tests
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "test/**/*"
+
+# Examples don't need to use ENV.fetch
+Style/FetchEnvVar:
+  Exclude:
+    - "examples/**/*"
+
+# Examples use $0 for clarity
+Style/SpecialGlobalVars:
+  Exclude:
+    - "examples/**/*"
+
+# Allow unused arguments in examples (for demonstration)
+Lint/UnusedMethodArgument:
+  Exclude:
+    - "examples/**/*"
+
+# Allow unused assignment in examples
+Lint/UselessAssignment:
+  Exclude:
+    - "examples/**/*"
+
+# Keep development dependencies in gemspec for clarity
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+# We support Ruby 3.1+ but don't want to restrict TargetRubyVersion
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - "test/**/*"
     - "*.gemspec"
+
+Metrics/MethodLength:
+  Exclude:
+    - "test/**/*"
+  # Instrumentation methods are inherently complex
+  Max: 20
+
+Metrics/AbcSize:
+  Exclude:
+    - "test/**/*"
+
+Metrics/ClassLength:
+  Exclude:
+    - "test/**/*"
+
+Minitest/MultipleAssertions:
+  Enabled: false
 
 Layout/LineLength:
   Max: 120

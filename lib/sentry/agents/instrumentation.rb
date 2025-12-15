@@ -82,9 +82,7 @@ module Sentry
           "gen_ai.request.model" => model
         }
 
-        if messages
-          attributes["gen_ai.request.messages"] = Serializer.serialize(messages)
-        end
+        attributes["gen_ai.request.messages"] = Serializer.serialize(messages) if messages
 
         SpanBuilder.build(
           operation: :chat,
@@ -123,9 +121,7 @@ module Sentry
           "gen_ai.tool.name" => tool_name
         }
 
-        if tool_input
-          attributes["gen_ai.tool.input"] = Serializer.serialize(tool_input)
-        end
+        attributes["gen_ai.tool.input"] = Serializer.serialize(tool_input) if tool_input
 
         SpanBuilder.build(
           operation: :execute_tool,

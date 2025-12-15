@@ -28,15 +28,15 @@ module Sentry
           max_length ||= Sentry::Agents.configuration.max_string_length
 
           result = case value
-          when String
-            value
-          when Hash, Array
-            value.to_json
-          when NilClass
-            return nil
-          else
-            value.to_s
-          end
+                   when String
+                     value
+                   when Hash, Array
+                     value.to_json
+                   when NilClass
+                     return nil
+                   else
+                     value.to_s
+                   end
 
           truncate(result, max_length)
         end
