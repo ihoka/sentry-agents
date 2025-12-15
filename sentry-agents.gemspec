@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
     supporting multiple providers (Anthropic, OpenAI, etc.)
     with auto-instrumentation for RubyLLM and LangChain.rb.
   DESC
-  spec.homepage = "https://github.com/ihoka/sentry-agents-ruby"
+  spec.homepage = "https://github.com/ihoka/sentry-agents"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
