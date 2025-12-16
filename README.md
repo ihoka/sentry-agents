@@ -1,5 +1,9 @@
 # Sentry Agents
 
+[![Gem Version](https://badge.fury.io/rb/sentry-agents.svg)](https://badge.fury.io/rb/sentry-agents)
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop/rubocop)
+[![Gem Downloads](https://img.shields.io/gem/dt/sentry-agents)](https://rubygems.org/gems/sentry-agents)
+
 Sentry Gen AI instrumentation for AI/LLM agents in Ruby applications.
 
 Provides [Sentry's AI Agents monitoring](https://docs.sentry.io/platforms/python/tracing/instrumentation/custom-instrumentation/ai-agents-module/) capabilities for Ruby, supporting multiple LLM providers (Anthropic, OpenAI, Cohere, Google Gemini, etc.).
