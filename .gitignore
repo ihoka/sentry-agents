@@ -17,3 +17,16 @@ Gemfile.lock
 
 # OS
 .DS_Store
+
+# Claude Code settings
+.claude/settings.local.json
+
+# Temporary files and debugging
+/temp/
+temp/
+**/temp/
+debug-*.rb
+test-*.rb
+analyze-*.rb
+*-debug.*
+*.debug
